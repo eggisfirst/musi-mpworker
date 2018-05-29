@@ -1,0 +1,18 @@
+<view class="container verification">
+  <view class="logo"></view>
+  <form class="loginForm" bindsubmit="" bindreset="">
+    <view class="content">
+      <view class="headImg">
+        <image bindtap="toUserInfo" src="https://derucci.net/vip/imgs/man.png" />
+        <text>慕Sir</text>
+      </view>
+      <text>电话：1882486****</text>
+      <text>可消费次数：8次</text>
+      <view>
+        <label for="verification">消费次数　</label>
+        <input type="text" />
+      </view>
+    </view>
+    <button hover-class="buttonHover" type="button" bindtap="defaultTap">核销</button>    
+  </form>
+</view>

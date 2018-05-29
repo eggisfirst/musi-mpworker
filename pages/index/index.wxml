@@ -1,0 +1,17 @@
+<view class="container login">
+  <view class="logo"></view>
+  <form class="loginForm" bindsubmit="" bindreset="">
+    <view class="content">
+      <text>工作人员登陆窗口</text>
+      <view>
+        <label for="account">账号：</label>
+        <input value="{{account}}" type="text" />
+      </view>
+      <view>
+        <label for="passWord">密码：</label>
+        <input value="{{passWord}}" password="true" bindinput="changePassWord('passWord')" type="phone" />
+      </view>
+    </view>
+    <button hover-class="buttonHover" type="default" bindtap="login">登陆</button>    
+  </form>
+</view>

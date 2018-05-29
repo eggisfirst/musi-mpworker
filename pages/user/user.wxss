@@ -1,0 +1,19 @@
+.user{
+  background: url(https://derucci.net/vip/imgs/scan.png) no-repeat, url(https://derucci.net/vip/imgs/bg.png) no-repeat, rgba(0, 0, 0, .96);
+  background-size: 100% auto, 100% auto;
+}
+.headImg{
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  padding: 40rpx 50rpx;
+  box-sizing: border-box;
+}
+.headImg image{
+  width: 125rpx;
+  height: 125rpx;
+}
+.headImg text{
+  color: #fefefe;
+  margin-left: 30rpx;
+}

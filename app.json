@@ -1,0 +1,15 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/worldMap/worldMap",
+    "pages/user/user",
+    "pages/verify/verify"
+  ],
+  "window":{
+    "backgroundTextStyle":"black",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "慕思机场VIP",
+    "navigationBarTextStyle":"balck"
+  }
+}

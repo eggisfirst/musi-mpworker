@@ -1,0 +1,52 @@
+.loginForm{
+  width: 95%;
+  align-self: flex-end;
+}
+.loginForm .content{
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-top: 120rpx;
+  padding: 50rpx 50rpx 80rpx 50rpx;
+  background: url(https://derucci.net/vip/imgs/block1.png) no-repeat;
+  background-size: 100% 100%;
+}
+.loginForm text{
+  display: block;
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  line-height: 2em;
+}
+.content view{
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx 0;
+}
+.loginForm label,.loginForm input{
+  color: #fff;
+  font: 16px;
+}
+.loginForm input{
+  width: 200rpx;
+  background: url(https://derucci.net/vip/imgs/timess.png) no-repeat;
+  background-size: auto 100%;
+}
+.loginForm button{
+  margin-top: 100rpx;
+}
+.content view.headImg{
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  /* padding: 40rpx 50rpx; */
+  /* box-sizing: border-box; */
+}
+.content view.headImg image{
+  width: 160rpx;
+  height: 125rpx;
+}
+.content view.headImg text{
+  color: #fefefe;
+  margin-left: 30rpx;
+}
