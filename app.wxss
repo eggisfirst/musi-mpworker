@@ -23,10 +23,11 @@ button{
   width: 50%;
   height: 60rpx;
   background: none;
-  color: #e7cfa7;
-  border: 1px solid #e7cfa7;
+  color: #f2ddb2;
+  border: 1px solid #f2ddb2;
   border-radius: 35rpx;
   line-height: 60rpx;
+  font-weight: 300;
 }
 button.buttonHover{
   opacity: 0.6;

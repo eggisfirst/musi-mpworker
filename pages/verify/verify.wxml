@@ -1,18 +1,23 @@
 <view class="container verification">
   <view class="logo"></view>
-  <form class="loginForm" bindsubmit="" bindreset="">
+  <component-alert alertShow="{{alertShow}}" bind:alertEvent="back">
+    <view class="icon"></view>
+    <text>{{alertMsg}}</text>
+  </component-alert>
+  <form class="loginForm" bindsubmit="verify" bindreset="">
     <view class="content">
       <view class="headImg">
-        <image bindtap="toUserInfo" src="https://derucci.net/vip/imgs/man.png" />
-        <text>慕Sir</text>
+        <!-- <image bindtap="toUserInfo" src="https://derucci.net/vip/imgs/man.png" /> -->
+        <text>姓名：{{name}}</text>
       </view>
-      <text>电话：1882486****</text>
-      <text>可消费次数：8次</text>
+      <text>电话：{{phone}}</text>
+      <text>卡号：{{cardNum}}</text>
+      <text>可消费次数：{{surplusNum}}次</text>
       <view>
         <label for="verification">消费次数　</label>
-        <input type="text" />
+        <input type="text" name="count" />
       </view>
     </view>
-    <button hover-class="buttonHover" type="button" bindtap="defaultTap">核销</button>    
+    <button hover-class="buttonHover" type="button" form-type="submit">核销</button>    
   </form>
 </view>

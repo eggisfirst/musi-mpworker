@@ -1,0 +1,31 @@
+<view class="container user">
+  <!-- <button type="button" bindtap="start">点击开启</button> -->
+  <view class="verifyChange">
+    <!-- <image bindtap="toUserInfo" src="https://derucci.net/vip/imgs/man.png" /> -->
+    <!-- <component-alert alertShow="{{alertShow}}" bind:alertEvent="goVerify">
+      <view class="inputBox">
+        <label>卡号：</label>
+        <input id="cardInput" bindinput="changeVal" type="text" auto-focus />
+      </view>
+    </component-alert> -->
+    <view class="accountMsg">
+      <text>{{name}}</text>
+      <text class="account">账号：{{account}}</text>
+    </view>
+    <view class="scanBox">
+      <button hover-class="buttonHover" type="default" bindtap="scan">扫码核销</button>    
+      <button hover-class="buttonHover" type="default" bindtap="showAlert">输卡核销</button>
+    </view>
+    <view class="cardInputContainer {{cardInputShow}}">
+      <view class="logo"></view>
+      <view class="cardBox">
+        <text>请输入卡号</text>
+        <view class="cardInputBox">
+          <label for="">卡号：</label>
+          <input id="cardInput1" bindinput="changeVal" type="text" />
+        </view>
+      </view>
+      <button class="cardInputBtn" bindtap="goVerify">确定</button>
+    </view>
+  </view>
+</view>

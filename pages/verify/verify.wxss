@@ -15,8 +15,9 @@
   display: block;
   width: 100%;
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 2em;
+  font-weight: 300;
 }
 .content view{
   display: flex;
@@ -24,8 +25,9 @@
   padding: 20rpx 0;
 }
 .loginForm label,.loginForm input{
-  color: #fff;
-  font: 16px;
+  color: #fefefe;
+  font: 14px;
+  font-weight: 300;
 }
 .loginForm input{
   width: 200rpx;
@@ -34,19 +36,23 @@
 }
 .loginForm button{
   margin-top: 100rpx;
+  width: 40%;
+  font-size: 14px;
+  line-height: 2.4em;
+  height: 2.4em;
+  border-radius: 1.2em;
 }
 .content view.headImg{
   display: flex;
   align-items: flex-end;
   width: 100%;
-  /* padding: 40rpx 50rpx; */
-  /* box-sizing: border-box; */
+  background: url(https://derucci.net/vip/imgs/line.png) no-repeat;
+  background-position: left 0 bottom 0;
+  background-size: 80% 4rpx; 
 }
-.content view.headImg image{
-  width: 160rpx;
-  height: 125rpx;
-}
-.content view.headImg text{
-  color: #fefefe;
-  margin-left: 30rpx;
+view.icon{
+  width: 18vw;
+  height: 18vw;
+  background: url(https://derucci.net/vip/imgs/ok.png) no-repeat;
+  background-size: 100% 100%;
 }

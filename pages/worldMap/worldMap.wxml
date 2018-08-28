@@ -1,4 +1,0 @@
-<view class="container">
-  <text>世界地图</text>
-  <map class="worldMap" scale="1"></map>
-</view>

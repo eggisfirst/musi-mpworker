@@ -1,0 +1,117 @@
+/* .user{
+  background: url(https://derucci.net/vip/imgs/scan.png) no-repeat, url(https://derucci.net/vip/imgs/bg.png) no-repeat, rgba(0, 0, 0, .96);
+  background-size: 100% auto, 100% auto;
+} */
+.verifyChange{
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  flex-direction: column;
+  width: 100%;
+  padding: 40rpx 50rpx;
+  box-sizing: border-box;
+}
+.accountMsg{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* border-bottom: 1px solid #fff; */
+  line-height: 2em;
+  padding-bottom: 10px;
+  background: url(https://derucci.net/vip/imgs/line.png) no-repeat;
+  background-position: left 0 bottom 0;
+  background-size: 100% 6rpx; 
+}
+.accountMsg text{
+  color: #fefefe;
+  font-weight: 300;
+}
+/* .account{
+  font-size: 12px;
+  line-height: 2em;
+} */
+.scanBox{
+  margin-top: 70rpx;
+}
+.scanBox button{
+  margin-top: 100rpx;
+  color: #f2ddb2;
+  background: none;
+  font-size: 14px;
+  line-height: 2.4em;
+  height: 2.4em;
+  border-radius: 1.2em;
+  letter-spacing: .6em;
+  font-weight: 300;
+  padding-left: 22px;
+}
+.inputBox{
+  display: flex;
+  flex-direction: row;
+}
+#cardInput{
+  display: block;
+  width: 300rpx;
+}
+
+.cardInputContainer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: url(https://derucci.net/vip/imgs/bg.png) no-repeat, rgba(0, 0, 0, .96);
+  background-size: 100% auto;
+}
+.cardBox{
+  width: 95%;
+  display: flex;
+  align-self: flex-end;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-top: 120rpx;
+  padding: 50rpx 60rpx 50rpx 50rpx;
+  background: url(https://derucci.net/vip/imgs/block.png) no-repeat;
+  background-size: 100% 100%;
+}
+.cardBox text{
+  color: #f2ddb2;
+  text-align: center;
+  font-size: 18px;
+}
+.cardInputBox{
+  display: flex;
+  flex-direction: row;
+  margin: 100rpx 30rpx;
+}
+.cardInputBox label{
+  font-size: 14px;
+  color: #fefefe;
+  line-height: 2em;
+  width: 50px;
+}
+#cardInput1{
+  /* flex: 3.2; */
+  display: block;
+  width: 168px;
+  height: 28px;
+  background: url(https://derucci.net/vip/imgs/small.png) no-repeat;
+  background-size: 100% 100%;
+  color: #fefefe;
+}
+.cardInputBtn{
+  margin-top: 60px;
+  font-size: 14px;
+  line-height: 2.4em;
+  height: 2.4em;
+  width: 40%;
+  border-radius: 1.2em;
+}
+.hide{
+  display: none;
+}
+

@@ -36,4 +36,6 @@
 }
 .loginForm button{
   margin-top: 100rpx;
+  background: none;
+  color: #f2ddb2;
 }

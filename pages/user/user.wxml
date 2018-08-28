@@ -1,7 +1,0 @@
-<view class="container user">
-  <!-- <button type="button" bindtap="start">点击开启</button> -->
-  <view class="headImg">
-    <image bindtap="toUserInfo" src="https://derucci.net/vip/imgs/man.png" />
-    <text>慕Sir</text>
-  </view>
-</view>

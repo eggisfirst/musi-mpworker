@@ -3,12 +3,11 @@ let token = require('../utils/token.js')
 
 let init = (function() {
   function Mango() {
-    const path = 'http://10.11.8.7/'
-    // const path = 'https://derucci.net/'
-
-    this.path = `${path}api/vip/v1/`
+    // this.port = 'http://10.11.8.7/'
+    this.port = 'https://derucci.net/'
+    this.path = `${this.port}api/vip/v1/`
     // this.path = `${path}api/public/v1/`
-    this.publicPath = `${path}api/public/v1/`
+    this.publicPath = `${this.port}api/public/v1/`
     this.secretKey = '477a1d7cc03d21d5abce55ec12170d33'
 
     // 获取时间戳

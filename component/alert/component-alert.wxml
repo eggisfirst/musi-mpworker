@@ -1,0 +1,9 @@
+<!-- 组件模板 -->
+<view class="wrapper">
+  <view class="alertBox {{alertShow}}">
+    <view class="alert">
+      <slot></slot>
+      <button type="default" bindtap="sure" hover-class="defaultTap">确定</button>
+    </view>
+  </view>
+</view>
