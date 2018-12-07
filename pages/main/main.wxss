@@ -1,0 +1,64 @@
+/* pages/main/main.wxss */
+/* pages/main/main.wxss */
+page{
+  border-top: 1rpx solid #e1e1e1;
+  background: #f2f2f2
+}
+.vipVerify,
+.vote{
+  width: 690rpx;
+  height: 200rpx;
+  margin: 0 auto;
+  margin-top: 50rpx;
+  font-size: 39rpx;
+	line-height: 30rpx;
+	letter-spacing: -1rpx;
+	color: #ffffff;
+  text-align: center;
+}
+.vipVerify{
+  background-image: linear-gradient(45deg, 
+		#5ac8fa 0%, 
+		#007aff 100%), 
+	linear-gradient(
+		#007aff, 
+		#007aff);
+	background-blend-mode: normal, 
+		normal;
+	box-shadow: 0px 4rpx 6rpx 0px 
+		rgba(0, 122, 255, 0.25);
+	border-radius: 20rpx;
+  padding-top: 48rpx;
+  box-sizing: border-box;
+}
+.vipVerify .begin-plane{
+   background: url(https://derucci.net/vip/imgs/begin-plane.png) no-repeat;
+   background-size: 100% 100%;
+   width: 60rpx;
+   height: 38rpx;
+   margin: 0 auto;
+   margin-bottom: 26rpx
+}
+.vote{
+  background-image: linear-gradient(45deg, 
+		#9e5afa 0%, 
+		#6000ff 100%), 
+	linear-gradient(
+		#5856d6, 
+		#5856d6);
+	background-blend-mode: normal, 
+		normal;
+	box-shadow: 0px 4rpx 6rpx 0px 
+		rgba(96, 0, 255, 0.65);
+	border-radius: 20rpx;
+  padding-top: 36rpx;
+  box-sizing: border-box
+}
+.vote .begin-icon{
+   background: url(https://derucci.net/vip/imgs/main-vote.png) no-repeat;
+   background-size: 100% 100%;
+   width: 60rpx;
+   height: 60rpx;
+   margin: 0 auto;
+   margin-bottom: 26rpx
+}

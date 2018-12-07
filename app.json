@@ -1,13 +1,15 @@
 {
-  "pages":[
+  "pages": [
+    "pages/vote/voteIn/voteIn",
+    "pages/main/main",
     "pages/index/index",
     "pages/verifyChange/verifyChange",
-    "pages/verify/verify"
+    "pages/verify/verify",
+    "component/pwdInput/pwdInput"
   ],
-  "window":{
-    "backgroundTextStyle":"black",
-    "navigationBarBackgroundColor": "#000",
-    "navigationBarTitleText": "慕思机场VIP",
-    "navigationBarTextStyle":"balck"
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#f7f7f7",
+    "navigationBarTitleText": "慕思工作台"
   }
 }

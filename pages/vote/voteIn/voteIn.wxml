@@ -1,0 +1,21 @@
+<!--pages/vote/voteIn/voteIn.wxml-->
+<view class='voteIn'>
+  <view class='search-box'>
+    <input placeholder='输入标题进行搜索' placeholder-style='color:#a2a2a2'
+      type='text' maxlength='20' class='search-input'></input>
+    <view class='search-icon'></view>
+  </view>
+  <view class='title'>
+    <view class='title-icon'></view>
+    <view>请选择问卷</view>
+  </view>
+  <view class='content'>
+    <view class='content-list' wx:for='{{voteTitle}}' bindtap='voteIn' id='{{index}}'>
+      <text>{{item.title}}<text class='encryption' wx:if='{{item.encryption}}'>【加密】</text></text>
+      <view class='content-icon'></view>
+    </view>
+  </view>
+  <component-pwdInput >
+  
+  </component-pwdInput>
+</view>

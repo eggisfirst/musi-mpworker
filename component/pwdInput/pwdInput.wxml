@@ -1,0 +1,8 @@
+<!--component/pwdInput/pwdInput.wxml-->
+<view class='input-box'>
+  <text>请输入密码</text>
+  <view>
+    <text>密码：</text>
+    <input></input>
+  </view> 
+</view>

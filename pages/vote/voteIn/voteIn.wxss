@@ -1,0 +1,75 @@
+/* pages/vote/voteIn/voteIn.wxss */
+.voteIn{
+  background: #f2f2f2;
+  height: 100%;
+  padding-top: 21rpx;
+  font-size: 34rpx;
+}
+  .search-box{
+    width: 692rpx;
+    height: 90rpx;
+    background-color: rgba(149, 154, 158, 0.1);
+    border-radius: 20rpx;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+    .search-input{
+      color: #a2a2a2;
+      width: 589rpx;
+      height: 100%;
+      border-top-left-radius: 20rpx;
+      border-bottom-left-radius: 20rpx;
+      padding: 5rpx 10rpx 5rpx 20rpx;
+      box-sizing: border-box;
+    }
+    .search-icon{
+      background: url(https://derucci.net/vip/imgs/search.png) no-repeat center;
+      background-size: 44rpx 44rpx;
+      width: 101rpx;
+      height: 90rpx;
+      margin-left: 28rpx;
+      background-color: #d8d9da;
+       border-top-right-radius: 20rpx;
+      border-bottom-right-radius: 20rpx;
+    }
+  .title{
+    margin-top: 38rpx;
+    text-align: center;
+    margin-bottom: 61rpx;
+  }
+    .title-icon{
+      background: url(https://derucci.net/vip/imgs/newvote.png) no-repeat center;
+      background-size: 100% 100%;
+      width: 138rpx;
+      height: 58rpx;
+      margin: 0 auto;
+      margin-bottom: 32rpx;
+    }
+  .content{
+    width: 690rpx;
+    margin: 0 auto
+  }
+    .content-list{
+      background: #fefefe;
+      border-radius:20rpx;
+      width: 100%;
+      height: 90rpx; 
+      color: #050505;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20rpx;
+      box-sizing: border-box;
+      margin-bottom: 10rpx;
+    }
+      .content-icon{
+        background: url(https://derucci.net/vip/imgs/arrow.png) no-repeat center;
+        background-size: 100% 100%;
+        width: 24rpx;
+        height: 23rpx;
+      }
+        .encryption{
+          font-size: 28rpx;
+          color: #b01f42;
+        }

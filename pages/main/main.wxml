@@ -1,0 +1,13 @@
+<!--pages/main/main.wxml-->
+<!--pages/main/main.wxml-->
+<view class='begin' bindtap='vipIn'>
+  <view class='vipVerify'> 
+    <view class='begin-plane'></view>
+    <text>慕思机场VIP后台验证</text>
+  </view>
+  <view class='vote' bindtap='voteIn'>
+    <view class='begin-icon'></view>
+    <text>投票及评分</text>
+  </view>
+</view>
+
