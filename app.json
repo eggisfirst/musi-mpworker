@@ -5,7 +5,8 @@
     "pages/index/index",
     "pages/verifyChange/verifyChange",
     "pages/verify/verify",
-    "component/pwdInput/pwdInput"
+    "component/pwdInput/pwdInput",
+    "pages/vote/votePage/votePage"
   ],
   "window": {
     "navigationBarTextStyle": "black",

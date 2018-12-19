@@ -1,1 +1,71 @@
 /* component/pwdInput/pwdInput.wxss */
+.bg{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color:rgba(0, 0, 0,0.6);
+}
+  .input-box{
+    margin:auto;
+    width: 666rpx;
+    height: 376rpx;
+    background-color:rgba(255,255,255,0.88);
+    border-radius: 30rpx;
+    display: flex;
+    flex-direction: column;
+    margin-top: 375rpx;
+  }
+  .title{
+    font-size: 36rpx;
+    color: #333;
+    text-align: center;
+    margin-top: 53rpx;
+    margin-bottom: 90rpx;
+  }
+  .pwd-wrapper{
+    display: flex;
+    padding: 0 46rpx;
+    align-items: center;
+  }
+  .input{
+    width: 448rpx;
+    height: 60rpx;
+    border-radius: 30rpx;
+    background-color: #e3e3e3;
+    padding-left: 15rpx;
+    padding-right: 15rpx;
+    font-size: 28rpx;
+    box-shadow: 0px 1rpx 0 0 rgba(180,180,180,1) inset;
+    color: #909090;
+  }
+  text{
+    color: #909090;
+    font-size: 28rpx;
+  }
+  .btn{
+    text-align: center;
+    width: 340rpx;
+    height: 80rpx;
+    background-image: linear-gradient(45deg, 
+      #9e5afa 0%, 
+      #6000ff 100%), 
+    linear-gradient(
+      #ffffff, 
+      #ffffff);
+    box-shadow: 0px 4px 6px 0px 
+      rgba(0, 0, 0, 0.2), 
+      inset 0rpx 1rpx 0rpx 0rpx 
+      rgba(255, 255, 255, 0.2);
+    border-radius: 40rpx;
+    margin: auto;
+    margin-top: 61rpx;
+  }
+  .text{
+    font-size: 34rpx;
+    line-height: 80rpx;
+    letter-spacing: 26rpx;
+    color: #ffffff;
+    margin-left: 26rpx;
+  }

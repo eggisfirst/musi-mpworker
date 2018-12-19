@@ -1,7 +1,7 @@
 /* pages/vote/voteIn/voteIn.wxss */
 .voteIn{
   background: #f2f2f2;
-  height: 100%;
+  min-height: 100%;
   padding-top: 21rpx;
   font-size: 34rpx;
 }
@@ -48,7 +48,8 @@
     }
   .content{
     width: 690rpx;
-    margin: 0 auto
+    margin: 0 auto;
+    padding-bottom: 20rpx;
   }
     .content-list{
       background: #fefefe;

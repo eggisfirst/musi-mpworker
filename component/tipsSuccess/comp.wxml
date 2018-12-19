@@ -1,0 +1,6 @@
+<view class='tips'>
+  <view class='content'>
+    <view class='image'></view>
+    <view class='text'>提交成功</view>
+  </view>
+</view>

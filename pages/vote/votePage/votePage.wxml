@@ -1,0 +1,54 @@
+
+<view class='wrapper'>
+  <view class='line'>
+    <view class='corner-icon'>
+      <image class='left-top-img' src='https://derucci.net/vip/imgs/corner.png'></image>
+      <image class='right-top-img' src='https://derucci.net/vip/imgs/corner.png'></image>
+      <image class='left-bottom-img' src='https://derucci.net/vip/imgs/corner.png'></image>
+      <image class='right-bottom-img' src='https://derucci.net/vip/imgs/corner.png'></image>
+    </view>
+  </view>
+  <view class='content'>
+    <view class='header'>
+      <text class='title'>投票标题</text>
+      <view class='deadline'>截止时间</view>
+      <view class='explain'>
+        尊敬的客户：
+        为了更好的为您提供。。为了更好的为您提供。。为了更好的为您提供。。
+      </view>
+    </view>
+    <view class='question'>
+      <!-- 单选题 -->
+      <view class='question-wrapper'>
+        <text class='radio-title'>1.您认为本公司枕头的舒适度如何?</text>
+        <text class='tips'>*</text>
+        <view class='tips-text'>这道题必须回答哦！</view>
+        <radio-group class="radio-group">
+          <label class="radio" wx:for="{{items}}">
+            <radio value="{{item.name}}" checked="{{item.checked}}" color='#000'/>{{item.value}}
+          </label>
+        </radio-group>
+        <!-- 多选题 -->
+        <checkbox-group bindchange="checkboxChange">
+          <label class="checkbox" wx:for="{{items}}">
+            <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+          </label>
+        </checkbox-group>
+         <!-- 滑动条 -->
+        <view class='body-view'>
+          <slider name="slider" show-value activeColor='#000'></slider>
+        </view>
+         <!-- 选填题 -->
+        <textarea
+          maxlength='-1'
+          placeholder="请输入..."
+          placeholder-style="color:#666;"
+        />
+      </view>
+    </view>
+    <view class='btn'>
+      <text>提交</text>
+    </view>
+  </view>
+   <e-tipsSuccess></e-tipsSuccess>
+</view>

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "投票标题",
+  "navigationBarBackgroundColor": "#f7f7f7",
+  "usingComponents": {
+    "e-tipsSuccess": "../../../component/tipsSuccess/comp"
+  }
+}

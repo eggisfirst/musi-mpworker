@@ -2,6 +2,6 @@
   "navigationBarTitleText": "投票及评分",
   "navigationBarBackgroundColor": "#f7f7f7",
   "usingComponents": {
-    "component-pwdInput": "../../../component/pwdInput/pwdInput"
+    "e-pwdInput": "../../../component/pwdInput/pwdInput"
   }
 }
