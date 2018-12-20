@@ -1,15 +1,16 @@
-<!--pages/vote/voteIn/voteIn.wxml-->
 <view class='voteIn'>
   <view class='search-box'>
-    <input placeholder='输入标题进行搜索' 
+    <input  class='search-input' type='text' maxlength='20'
+      placeholder='输入标题进行搜索' 
       placeholder-style='color:rgba(162,162,162,0.4)'
-      type='text' maxlength='20' class='search-input' 
-      bindinput='getVal'></input>
-    <view class='search-icon' bindtap='search'></view>
+      bindconfirm='search'
+      bindblur='onblur'
+      />
+    <image class='search-icon' bindtap='search'/>
   </view>
   <view class='title'>
     <view class='title-icon'></view>
-    <view>请选择问卷</view>
+    <text>请选择问卷</text>
   </view>
   <view class='content'>
     <view class='content-list' 
@@ -18,9 +19,15 @@
       data-id='{{item.id}}' 
       wx:key='id'
       data-encrypt='{{item.encrypt}}'>
-      <text>{{item.title}}<text class='encryption' wx:if='{{item.encrypt}}'>【加密】</text></text>
+      <text>{{item.title}}
+        <text class='encryption' wx:if='{{item.encrypt}}'>【加密】</text>
+      </text>
       <view class='content-icon'></view>
     </view>
   </view>
-  <e-pwdInput	wx:if="{{isEncrypt}}" id='{{id}}'></e-pwdInput>
+  <e-pwdInput	
+    wx:if="{{isEncrypt}}" 
+    dataID='{{id}}'  
+    bindencryptvent="encryptEvent">
+  </e-pwdInput>
 </view>

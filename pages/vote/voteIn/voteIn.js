@@ -1,61 +1,70 @@
-import request from '../../../utils/common'
+import {IndexModel} from '../../../models/index'
+const indexModel = new IndexModel()
 
 Page({
   data: {
     title: [],
-    searchVal: '',
     isEncrypt: false,
-    id: null
+    id: null,
+    searchVal:''
+  },
+  onLoad() {
+    this.getData()
+  },
+  //后退的时候弹框隐藏，搜索框清零。
+  onShow() {
+    this.setData({
+      searchVal: '',
+      isEncrypt: false
+    })
+  },
+  //接收组件传过来到值，弹框隐藏
+  encryptEvent(e) {
+    const isEncrypt = e.detail.isEncrypt
+    this.setData({
+      isEncrypt
+    })
   },
   //获取input的值
-  getVal(e) {
+  onblur(e) {
+    const searchVal = e.detail.value
     this.setData({
-      searchVal: e.detail.value
+      searchVal
     })
   },
   //搜索功能
   search() {
-    var val = this.data.searchVal
-    console.log(val)
-    wx.request({
-      url: 'http://10.11.8.207/api/voteInfo/list',
-      data: val,
-      // header: {'content-type': 'application/x-www-form-urlencoded'},
-      method: 'GET',
-      dataType: 'json',
-      responseType: 'text',
-      success: (res) => {
-        if(res) {
-          this.setData({
-            title:res.data.page.list
-          })
-        }
-      },
-      fail: function(res) {console.log(res)},
-    })
-    // request({
-    //   url: "/voteInfo/list",
-    //   method: 'GET',
-    //   data: val,
-    //   dataType: 'json',
-    //   responseType: 'text',
-    //   success: function(res){
-    //     console.log(1111,res)
-    //   }
-    // })
+    //搜索空值的时候不跳转
+    const value = this.data.searchVal
+    if(value === '') {
+      return
+    }
+    this.getData(value)
   },
   //进入问卷
   voteIn(e){
-    let status = e.currentTarget.dataset.encrypt
+    const status = e.currentTarget.dataset.encrypt
+    const id = e.currentTarget.dataset.id
+    this.setData({
+      id 
+    })
     if(status) {
       this.setData({
         isEncrypt : true,
-        id : e.currentTarget.dataset.id
       })
     }else {
       wx.navigateTo({
-        url: `../votePage/votePage`
+        url: `../votePage/votePage?titleId=${id}`
       })
     }
+  },
+  //ajax
+  getData(value='') {
+    indexModel.getVoteInList(value).then(res => {
+      const title = res.data.page.list
+      this.setData({
+        title
+      })
+    })
   }
 })

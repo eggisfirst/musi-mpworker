@@ -10,45 +10,54 @@
   </view>
   <view class='content'>
     <view class='header'>
-      <text class='title'>投票标题</text>
-      <view class='deadline'>截止时间</view>
-      <view class='explain'>
-        尊敬的客户：
-        为了更好的为您提供。。为了更好的为您提供。。为了更好的为您提供。。
-      </view>
+      <text class='title'>{{title}}</text>
+      <view class='deadline'>截止时间{{endTime}}</view>
+      <view class='explain'>{{comments}}</view>
     </view>
     <view class='question'>
-      <!-- 单选题 -->
-      <view class='question-wrapper'>
-        <text class='radio-title'>1.您认为本公司枕头的舒适度如何?</text>
-        <text class='tips'>*</text>
-        <view class='tips-text'>这道题必须回答哦！</view>
-        <radio-group class="radio-group">
-          <label class="radio" wx:for="{{items}}">
-            <radio value="{{item.name}}" checked="{{item.checked}}" color='#000'/>{{item.value}}
-          </label>
+      <view class='question-wrapper' wx:for="{{list}}">
+        <text class='radio-title'>{{index + 1}}. {{item.question}}</text>
+        <text class='tips' wx:if="{{item.required}}">*</text>
+        <view class='tips-text' hidden="{{tips}}">这道题必须回答哦！</view>
+        <!-- 单选题 -->
+       <radio-group class="radio-group" 
+        wx:if="{{item.type == 0}}"
+        bindchange="radioChange"
+        >
+        <label class="radio" wx:for="{{item.optionList}}">
+          <radio value="{{item.id}}" color='#000'/>
+            {{item.questionOption}}
+        </label>
         </radio-group>
         <!-- 多选题 -->
-        <checkbox-group bindchange="checkboxChange">
-          <label class="checkbox" wx:for="{{items}}">
-            <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+        <checkbox-group 
+          bindchange="checkboxChange" 
+          wx:if="{{item.type == 1}}"
+          >
+          <label class="checkbox" wx:for="{{item.optionList}}">
+            <checkbox value="{{item.id}}"/>
+              {{item.questionOption}}
           </label>
         </checkbox-group>
          <!-- 滑动条 -->
-        <view class='body-view'>
-          <slider name="slider" show-value activeColor='#000'></slider>
-        </view>
+        <slider name="slider"
+          show-value 
+          activeColor='#000'
+          wx:if="{{item.type == 3}}"
+          bindchange="sliderChange"
+          />
          <!-- 选填题 -->
-        <textarea
+        <textarea wx:if="{{item.type == 2}}"
           maxlength='-1'
           placeholder="请输入..."
           placeholder-style="color:#666;"
-        />
+          bindblur="textAreaChange"
+          />
       </view>
     </view>
-    <view class='btn'>
+    <view class='btn' bind:tap="submit">
       <text>提交</text>
     </view>
   </view>
-   <e-tipsSuccess></e-tipsSuccess>
+   <!-- <e-tipsSuccess></e-tipsSuccess> -->
 </view>

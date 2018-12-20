@@ -1,14 +1,18 @@
 /* component/pwdInput/pwdInput.wxss */
-.bg{
-  width: 100%;
-  height: 100%;
-  position: absolute;
+.mask{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
   top: 0;
   left: 0;
   background-color:rgba(0, 0, 0,0.6);
 }
   .input-box{
-    margin:auto;
+    z-index: 99;
+    position: absolute;
+    top:0;
+    left: 50%;
+    margin-left: -333rpx;
     width: 666rpx;
     height: 376rpx;
     background-color:rgba(255,255,255,0.88);
@@ -45,6 +49,7 @@
     font-size: 28rpx;
   }
   .btn{
+    z-index: 99;
     text-align: center;
     width: 340rpx;
     height: 80rpx;
@@ -59,8 +64,11 @@
       inset 0rpx 1rpx 0rpx 0rpx 
       rgba(255, 255, 255, 0.2);
     border-radius: 40rpx;
-    margin: auto;
-    margin-top: 61rpx;
+    position: absolute;
+    margin-bottom: 300rpx;
+    bottom: 0;
+    left: 0;
+    margin-left: 200rpx;
   }
   .text{
     font-size: 34rpx;

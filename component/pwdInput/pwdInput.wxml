@@ -5,10 +5,13 @@
     <text class='title'>请输入密码</text>
     <view class='pwd-wrapper'>
       <text class='pwd'>密码：</text>
-      <input class='input' maxlength='20' bindinput='getPwd'></input>
+      <input class='input' maxlength='20' 
+      bindblur='onblur'
+      />
     </view> 
   </view>
   <view class='btn'>
     <text class='text' bindtap='submit' >确定</text>
   </view>
+  <cover-view class="mask" bind:tap="closeBtn"></cover-view>
 </view>
