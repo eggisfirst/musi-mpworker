@@ -1,4 +1,5 @@
 //app.js
+let mango = require('./utils/nameSpace')
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -13,17 +14,41 @@ App({
       borderStyle: 'white'
     })
 
-    // 登录
+    // 登录 /获取openid
     wx.login({
       success: res => {
-        console.log(res)
-        wx.setStorage({
-          key : 'code',
-          data :  res.code
-          })
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        const code = res.code
+        let timestamp = mango.getTimestamp()
+        let arr= [
+          ['jsCode',code],
+          ['type','derucci'],
+          ['secretKey', '477a1d7cc03d21d5abce55ec12170d33'],
+          ['timestamp', timestamp]
+        ]
+        let sign = mango.getSign(arr)
+        wx.request({
+          url:'https://derucci.net/api/public/v1/sns/jscode2session',
+          data:{
+            jsCode:code,
+            type:'derucci',
+            timestamp,
+            secretKey:'477a1d7cc03d21d5abce55ec12170d33',
+            sign,
+          },
+          method: "GET",
+          dataType: 'json',
+          responseType: 'text',
+          success:(res) => {
+            const openid = res.data.openid
+            wx.setStorage({
+              key: 'openid',
+              data: openid
+            })
+          }
+        }) 
       }
     })
+    
     // 获取用户信息
     wx.getSetting({
       success: res => {

@@ -142,6 +142,7 @@
      line-height: 48rpx;
     }
     .btn{
+      border: none;
       width: 585rpx;
       height: 88rpx;
       background-image: linear-gradient(0deg, 

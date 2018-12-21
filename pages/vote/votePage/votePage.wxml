@@ -14,50 +14,59 @@
       <view class='deadline'>截止时间{{endTime}}</view>
       <view class='explain'>{{comments}}</view>
     </view>
+    <form bindsubmit="formSubmit">
     <view class='question'>
-      <view class='question-wrapper' wx:for="{{list}}">
+      <view class='question-wrapper'
+       wx:for="{{list}}" 
+       wx:key ='{{item.id}}'
+       >
         <text class='radio-title'>{{index + 1}}. {{item.question}}</text>
         <text class='tips' wx:if="{{item.required}}">*</text>
-        <view class='tips-text' hidden="{{tips}}">这道题必须回答哦！</view>
+        <view class='tips-text' hidden="{{a[index] == item.id? false : true }}">这道题必须回答哦！</view>
         <!-- 单选题 -->
        <radio-group class="radio-group" 
+        name="{{item.id}}"
         wx:if="{{item.type == 0}}"
-        bindchange="radioChange"
         >
-        <label class="radio" wx:for="{{item.optionList}}">
-          <radio value="{{item.id}}" color='#000'/>
+        <label class="radio" wx:for="{{item.optionList}}" wx:key ='{{item.id}}'>
+          <radio value="{{[item.id]}}" color='#000'/>
             {{item.questionOption}}
         </label>
         </radio-group>
         <!-- 多选题 -->
         <checkbox-group 
-          bindchange="checkboxChange" 
+          name="{{item.id}}"
           wx:if="{{item.type == 1}}"
           >
-          <label class="checkbox" wx:for="{{item.optionList}}">
+          <label class="checkbox" wx:for="{{item.optionList}}" wx:key ='{{item.id}}'>
             <checkbox value="{{item.id}}"/>
               {{item.questionOption}}
           </label>
         </checkbox-group>
          <!-- 滑动条 -->
-        <slider name="slider"
+        <slider 
+          name="{{item.id}}"
           show-value 
           activeColor='#000'
           wx:if="{{item.type == 3}}"
-          bindchange="sliderChange"
+          min="{{item.lowestScore}}" 
+          max="{{item.highestScore}}"
+          value='{{item.initialScore}}'
+          step="{{item.intervalScore}}"
+          data-intervalScore='{{item.intervalScore}}'
           />
          <!-- 选填题 -->
-        <textarea wx:if="{{item.type == 2}}"
+        <textarea 
+          name="{{item.id}}"
+          wx:if="{{item.type == 2}}"
           maxlength='-1'
           placeholder="请输入..."
           placeholder-style="color:#666;"
-          bindblur="textAreaChange"
           />
       </view>
     </view>
-    <view class='btn' bind:tap="submit">
-      <text>提交</text>
-    </view>
+    <button form-type="submit" class="btn">提交</button>
+    </form>
   </view>
-   <!-- <e-tipsSuccess></e-tipsSuccess> -->
+   <e-tipsSuccess wx:if="{{showTip}}"></e-tipsSuccess>
 </view>
