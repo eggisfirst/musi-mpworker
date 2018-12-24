@@ -6,6 +6,7 @@
       bindconfirm='search'
       bindblur='onblur'
       value='{{searchVal}}'
+      disabled="{{inputStatus}}"
       />
     <image class='search-icon' bindtap='search'/>
   </view>

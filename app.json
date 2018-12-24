@@ -1,11 +1,11 @@
 {
   "pages": [
-    "pages/vote/voteIn/voteIn",
     "pages/main/main",
     "pages/index/index",
     "pages/verifyChange/verifyChange",
     "pages/verify/verify",
     "component/pwdInput/pwdInput",
+    "pages/vote/voteIn/voteIn",
     "pages/vote/votePage/votePage"
   ],
   "window": {

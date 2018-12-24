@@ -6,16 +6,18 @@ Page({
     title: [],
     isEncrypt: false,
     id: null,
-    searchVal:''
+    searchVal:'',
+    inputStatus:false
   },
   onLoad() {
-    this.getData()
+    this._getData()
   },
   //后退的时候弹框隐藏，搜索框清零。
   onShow() {
     this.setData({
       isEncrypt: false,
-      searchVal: ''
+      searchVal: '',
+      inputStatus: false
     })
   },
   //接收组件传过来到值，弹框隐藏
@@ -36,7 +38,7 @@ Page({
   search() {
     //搜索空值的时候不跳转
     const value = this.data.searchVal
-    this.getData(value)
+    this._getData(value)
   },
   //进入问卷
   voteIn(e){
@@ -49,6 +51,7 @@ Page({
     if(isEncrypt) {
       this.setData({
         isEncrypt : true,
+        inputStatus: true
       })
     }else {
       wx.navigateTo({
@@ -57,7 +60,7 @@ Page({
     }
   },
   //获取标题列表
-  getData(value='') {
+  _getData(value='') {
     indexModel.getTitleList(value).then(res => {
       const title = res.data.page.list
       this.setData({
